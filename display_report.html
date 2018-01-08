@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name ="viewport" content="width=device-width initial-scale=1.0">
+	<title>Display student record</title>
+	<link rel="stylesheet" type="text/css" href="/home/bola/Documents/javascript_object_practise/app.css">
+</head>
+<body>
+	<div id="root">
+		<table id="student-table" cellpadding="0" cellspacing="0">
+			<caption>Student Record Report</caption>
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Name</th>
+					<th>Track</th>
+					<th>Achievements</th>
+					<th>Point</th>
+					<th><br /></th>
+				</tr>
+			</thead>
+			<tbody id="list">
+				<br >
+			</tbody>
+		</table>
+		
+			<input type="radio" id="searchRecord" name="collapse">
+			<label for="searchRecord" class="edit-btn">Search Record</label>
+			<input type="radio" id="addRecord" name="collapse">
+			<label for="addRecord" class="edit-btn">Add Record</label>
+
+		<div id="edit-record-wrapper">
+			<form id="searchrecord-form">
+				<div>
+					<input type="text" name="" placeholder="Type name here">
+					<!-- <input type="submit" name="" value="Search Record"> -->
+				</div>
+			</form>
+
+			<form id="addrecord-form">
+				<div>
+					<label for="student_id">Student Id</label>
+					<input type="text" id="student_id">
+				</div>
+				<div>
+					<label for="name">Name</label>
+					<input type="text" id="name">
+				</div>
+				<div>
+					<label for="track">Track</label>
+					<input type="text" id="track">
+				</div>
+				<div>
+					<label for="achievemments">Achievemments</label>
+					<input type="text" id="achievemments">
+				</div>
+				<div>
+					<label for="point">Point</label>
+					<input type="text" id="point">
+				</div>
+				<div>
+					<span class="fa fa-plus" aria-hidden="true"></span>
+				</div>
+			</form>
+		</div>
+		
+	</div>
+	<script type="text/javascript" src="/home/bola/Documents/javascript_object_practise/list_of_student.js"></script>
+	<script type="text/javascript" src="/home/bola/Documents/javascript_object_practise/student_report.js"></script>
+</body>
+</html>

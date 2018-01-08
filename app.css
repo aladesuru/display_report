@@ -1,0 +1,296 @@
+*
+{
+	margin: 0;
+	padding: 0
+}
+
+body
+{
+	font-size: 100%;
+}
+
+/* Table styling */
+
+#student-table caption,
+#student-table thead
+{
+	padding: 10px;
+	margin: 0;
+}
+
+#student-table
+{
+	width: 100%;
+	background-color: #f5f5f5;
+	font-size: 1.2em;
+	text-align: center;
+	margin-bottom: 20px;
+	margin-top: -20px;
+}
+
+
+#student-table caption
+{
+	background-color: #1a4456;
+	font-size: 1em;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #fff;
+}
+#student-table thead th
+{
+	background-color: #777;
+	color: #333;
+	padding: 10px 10px;
+}
+#student-table tbody tr
+{
+	transition: transform .20s , padding .5s;
+}
+#student-table tbody tr td
+{
+	padding: 5px 0;
+}
+
+#student-table tbody tr:nth-child(even)
+{
+	background-color: #ddd;
+}
+
+#student-table tbody tr:hover
+{
+	background-color: #5bbce4;
+	color: #fff;
+	padding: 10px 0;
+	/*transform: scale(1.1);*/
+	
+}
+
+.delete button,
+.edit-btn
+{
+	padding: 10px;
+	background-color: #e45b5b;
+	border: 0;
+	outline: 0;
+	color: #f5f5f5;
+	font-weight: bold;
+	transition: transform .30s;
+}
+
+.delete button:hover,
+.edit-btn:hover
+{
+	transform: scale(1.1);
+	cursor: pointer;
+}
+
+/* General styling for the forms */
+
+#edit-record-wrapper
+{
+	background-color: #5bbce4;
+	margin-top: 10px;
+	/*padding: 10px;*/
+	clear: both;
+	transition: height .30s;
+	height: 0;
+	overflow: hidden;
+}
+#searchrecord-form,
+#addrecord-form
+{
+	margin: 10px 0;
+}
+
+#searchRecord,
+#addRecord
+{
+	opacity: 0;
+	transition: opacity .20s .5s;
+}
+
+#edit-record-wrapper label
+{
+	padding: 10px;
+	color: #fff;
+}
+
+.edit-btn
+{
+	background-color: #124c45;
+	display: inline-block;
+}
+
+/* style for Add form */
+
+#addrecord-form input
+{
+	height: 25px;
+	border-radius: 5px;
+	border: 0;
+	outline: 0;
+	padding-left: 1%;
+}
+#addrecord-form label
+{
+	background-color: #1a4456;
+}
+
+
+/* style for Search form */
+
+#searchrecord-form
+{
+	text-align: center;
+	margin-bottom: 20px;
+}
+#searchrecord-form > div
+{
+	background-color: #ddd;
+	padding: 20px 1%;
+	background-color: #1a4456;
+}
+#searchrecord-form input[type ="submit"]
+{
+	padding: 10px;
+	background-color: #124c45;
+	color: #fff;
+	border: 2px solid #083447;
+	outline: 0px;
+	font-weight: bold;
+	font-size: 1em;
+
+}
+#searchrecord-form input[type ="submit"]:hover
+{
+	color: #ddd;
+	cursor: pointer;
+	letter-spacing: 1.5px;
+}
+#searchrecord-form input[type ="text"]
+{
+	width: 80%;
+	height: 32px;
+	outline: 0px solid #1a4456;
+	border: 0;
+	padding-left: 1%;
+}
+
+
+	#searchrecord-form,
+	#addrecord-form
+	{
+		opacity: 0;
+		transition: opacity .20s .1s;
+	}
+
+	#searchRecord:checked ~  #edit-record-wrapper #searchrecord-form ,
+	#addRecord:checked ~ #edit-record-wrapper #addrecord-form
+	{
+		opacity: 1;
+	}
+	#searchRecord:checked ~ #edit-record-wrapper,
+	#addRecord:checked ~ #edit-record-wrapper
+	{
+		height: 80px;
+		overflow: hidden;
+		padding: 10px;
+	}
+
+	#addRecord:checked ~ #edit-record-wrapper #addrecord-form
+	{
+		margin-top: -70px
+	}
+
+
+/* Making the App Responsive  */
+@media screen and (max-width: 768px) 
+{
+	#student-table
+	{
+		
+		font-size: .78em;
+	}
+	#student-table thead th
+	{
+		padding: 10px 1%;
+	}
+	.delete button
+	{
+		padding: 5px;
+		font-size: .65em;
+	}
+	#addrecord-form > div
+	{
+		margin: 5px 0;
+		font-size: .69em;
+	}
+	#addrecord-form label
+	{
+		width: 25%;
+		display: inline-block;
+	}
+
+	#addRecord:checked ~ #edit-record-wrapper
+	{
+		height: 11em;
+	}
+
+	#addRecord:checked ~ #edit-record-wrapper #addrecord-form
+	{
+		margin-top: -100px
+	}
+}
+
+@media screen and (min-width: 769px) 
+{
+	#edit-record-wrapper
+	{
+		height: 0px;
+		overflow: hidden;
+		padding: 0px;
+	}
+
+	#addrecord-form > div
+	{
+		display: inline-block;
+		width: 18%;
+	}
+
+	#searchrecord-form > div
+	{
+		width: 60%;
+		margin: 0px auto;
+	}
+	#searchrecord-form input[type ="text"]
+	{
+		width: 60%;
+		height: 32px;
+		outline: 0px solid #1a4456;
+		border: 0;
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+		padding-left: 1%;
+	}
+
+	.edit-btn
+	{
+		position: relative;
+		top: 0;
+		left: 70%;
+		margin: 0px 3px;
+
+	}
+
+	
+
+}
+
+@media screen and (min-width: 1614px) 
+{
+	.edit-btn
+	{
+		left: 83%;
+	}
+}
