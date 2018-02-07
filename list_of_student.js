@@ -34,4 +34,18 @@ let students = [
 		point: 1675,
 		id: 5
 	},
+	{
+		name : "Kwame Mintha",
+		track: "UX Designer",
+		achievemments: 534,
+		point: 175,
+		id: 6
+	},
+	{
+		name : "Samuel Olugbemi",
+		track: "Full Stack Developer",
+		achievemments: 54,
+		point: 1750,
+		id: 7
+	}
 ]
