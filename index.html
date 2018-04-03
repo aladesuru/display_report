@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name ="viewport" content="width=device-width initial-scale=1.0">
+	<title>Display student record</title>
+	<link rel="stylesheet" type="text/css" href="app.css">
+</head>
+<body>
+	<div id="root">
+		<div id="list"></div>
+			
+
+		<div id="edit-record-wrapper">
+			<input type="radio" id="searchRecord" name="collapse" />
+			<label for="searchRecord" class="edit-btn">Search Record</label>
+			<input type="radio" id="addRecord" name="collapse" checked="checked" />
+			<label for="addRecord" class="edit-btn">Add Record</label>
+			
+			<form id="searchrecord-form">
+				<div>
+					<input id="nameSearch" type="text" name="" placeholder="Type name here">
+					<input id="searchCandidate" type="submit" name="" value="Search">
+				</div>
+			</form>
+
+			<form id="addrecord-form">
+				<div>
+					<label for="student_id">Student Id</label>
+					<span class="tooltip" data="Student ID is Required" tabindex="1"><input type="text" id="student_id" pattern="/0-9/" /></span>
+				</div>
+				<div>
+					<label for="name">Name</label>
+					<span class="tooltip" data="Student Name is Required" tabindex="2"><input type="text" id="name" /></span>
+				</div>
+				<div>
+					<label for="track">Track</label>
+					<span class="tooltip" data="Student Track is Required" tabindex="3"><input type="text" id="track" /></span>
+				</div>
+				<div>
+					<label for="achievemments">Achievemments</label>
+					<span class="tooltip" data="Student Achievement is Required" tabindex="4"><input type="text" id="achievemments" /></span>
+				</div>
+				<div>
+					<label for="point">Point</label>
+					<span class="tooltip" data="Student Point is Required" tabindex="5"><input type="text" id="point" /></span>
+				</div>
+				<div>
+					<input id="addCandidate" type="submit" name="" value="Add Candidate">
+				</div>
+			</form>
+		</div>
+		<!-- <div class="hamburger">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div> -->
+	</div>
+	<script type="text/javascript" src="list_of_student.js"></script>
+	<script type="text/javascript" src="student_report.js"></script>
+</body>
+</html>
