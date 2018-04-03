@@ -88,6 +88,7 @@ _$("#addCandidate").onclick = (e) => {
 
 _$("#searchCandidate").onclick = (e) => {
 	e.preventDefault();
+	
 	_$("#list").innerHTML = display_record();
 
 	let nameSearch = _$("#nameSearch").value.trim().toLowerCase();
